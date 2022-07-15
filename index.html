@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <title>Blog javascript</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+    <div class="fluid-container">
+        <div class="row">
+            <div class="col-md-12">
+                <a href="/">
+                    <h1 id="titulo_blog"></h1>
+                </a>
+            </div>
+            <div id="descripcion_blog" class="col-md-12">
+
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-3">
+                <ul>
+                    <li><a href="nueva_entrada.html">Crear nueva entrada</a></li>
+                    <li><a href="exportar.html">Exportar</a></li>
+                    <li><a href="actualizar.html">Actualizar</a></li>
+                    <li><a href="Documentacion/index.html">Documentacion</a></li>
+                </ul>
+
+            </div>
+            <div class="col-md-9" id="post">
+                <h3>Entradas</h3>
+                <hr>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="markdown-it/markdown-it.min.js"></script>
+<script src="js/index.js" type="module"></script>
+<script src="register-serviceworker.js"></script>
+
+</html>

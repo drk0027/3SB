@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <title>Blog javascript</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!--     <link rel="manifest" href="manifest.json">
+ -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="fluid-container">
+        <div class="row">
+            <div class="col-md-12">
+                <a href="/"><h1 id="titulo_blog"></h1></a>
+            </div>
+            <div id="descripcion_blog" class="col-md-12">
+                
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-3">
+                <button id="eliminar">Eliminar</button>
+                <h3>Sobre el guardado automatico</h3>
+                <p>Cuando edita un post, se modifica su copia local.</p>
+                <h3>Advertencia</h3>
+                <p>Todos los cambios seran almacenados en el localStorage para visualizarlos, pero si se quieren hacer permanentes, se debe descargar una copia del archivo json completo y reemplazar el archivo original en el servidor utilizando el boton de Exportar</p>
+            </div>
+            <div class="col-md-9" id="post">
+                <input type="text" id="titulo_post" placeholder="Titulo del post">
+                <hr>
+                <textarea id="contenido_post" style="width: 100%; margin-top: 0px; margin-bottom: 0px; height: 250px;">
+
+                </textarea>
+                <hr>
+                <input type="text" id="etiquetas" placeholder="Etiquetas del post, separadas por comas">
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="markdown-it/markdown-it.min.js"></script>
+<script src="js/editar.js" type="module"></script>
+
+</html>

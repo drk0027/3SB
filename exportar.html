@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <title>Blog javascript</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!--     <link rel="manifest" href="manifest.json">
+ -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="fluid-container">
+        <div class="row">
+            <div class="col-md-12">
+                <a href="/"><h1 id="titulo_blog"></h1></a>
+            </div>
+            <div id="descripcion_blog" class="col-md-12">
+                
+            </div>
+            <h3>Instrucciones de uso</h3>
+            <p>Toda la base de datos de este sistema de blog es un archivo json simple. Los cambios realizados localmente se han exportado en el campo a continuacion para que lo almacene en reemplazo al archivo entradas.json con su editor de textos favoritos. En el momento de hacerlo, se actualizaran las nuevas entradas.</p>
+            <p>Aunque no deberia haber problemas en caso de manejo correcto, lo recomendable es siempre guardar una copia de un archivo entradas.json por si accidentalmente se altera la estructura del archivo. Si ocurriese esto, se cargaria el archivo incorrecto y no habria forma de restaurarlo</p>
+        </div>
+        <br>
+        <div class="row">
+            <textarea id="resultado"></textarea>
+        </div>
+    </div>
+</body>
+<script src="js/exportar.js" type="module"></script>
+
+</html>
