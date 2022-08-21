@@ -7,7 +7,7 @@
 **Proyecto Desplegado:** [3sb.interlan.ec](https://3sb.interlan.ec)
 [3SB en GitHub Pages](https://drk0027.github.io/3SB/)
 
-**Documentación:** [Documentación](https://3sb.interlan. ec/Documentacion/index.html)
+**Documentación:** [Documentación](https://3sb.interlan.ec/Documentacion/index.html)
 
 **GitHub:** [3SB en GitHub](https://github.com/drk0027/3SB)
 
