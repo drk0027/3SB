@@ -1,10 +1,15 @@
 **Autor:** [Drk0027](https://interlan.ec/portafolio-de-drk0027/)
 
-**Version:** 1.0
+**Versión:** 1.0
 
 **ChangeLog:** [Changelog](changelog.md)
 
-**Documentación:** [Documentación](https://3sb.interlan.ec/Documentacion/index.html)
+**Proyecto Desplegado:** [3sb.interlan.ec](https://3sb.interlan.ec)
+[3SB en GitHub Pages](https://drk0027.github.io/3SB/)
+
+**Documentación:** [Documentación](https://3sb.interlan. ec/Documentacion/index.html)
+
+**GitHub:** [3SB en GitHub](https://github.com/drk0027/3SB)
 
 ## Tabla de contenidos
 
@@ -73,8 +78,8 @@ Basta con copiar los archivos en la carpeta publica del servidor. Tal vez cuando
 
 [Is It Possible to Build a Blog With HTML Only?](https://stackoverflow.com/questions/9156367/is-it-possible-to-build-a-blog-with-html-only+&cd=4&hl=en&ct=clnk&gl=ec)
 
-https://www.quora.com/How-can-I-make-a-web-blog-using-HTML-CSS-and-JavaScript
+[](https://www.quora.com/How-can-I-make-a-web-blog-using-HTML-CSS-and-JavaScript)
 
-https://dev.to/n3rd/deploy-a-javascript-only-blog-with-cms-js-4g7j
+[Deploy a JavaScript only Blog With CMS.JS](https://dev.to/n3rd/deploy-a-javascript-only-blog-with-cms-js-4g7j)
 
-https://cms.js 
+~~[CMS.JS](https://cms.js)~~ Proyecto muerto
