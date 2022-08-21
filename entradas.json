@@ -1,123 +1,76 @@
 [
-    [
-        {
-            "sitio": "Sistema Super Simple de Blogging (3SB)",
-            "descripcion": "La idea de este proyecto es crear una plataforma muy simple de blogging que no dependa de fuentes externas ni de servidores especializados, sirviendose unicamente de un archivo json que puede ser actualizado unicamente por el propietario del sitio donde se aloje el blog"
-        }
-    ],
-    [
-        {
-            "id": 1,
-            "titulo": "SSSB",
-            "contenido": "# Sistema Super Simple de Blogging\n\n## Caracteristicas\n\nEste blog permite toda la gama de CRUD para cada elemento de la base de datos (entradas.json), pero los cambios se almacenan de forma local en el localStorage, por lo que si se quieren hacer publicos los cambios, es necesario exportar el nuevo archivo entradas.json y reemplazar al anterior.\n\nLas caracteristicas iniciales de este proyecto son las siguientes\n\n- **CRUD completo** Es decir, crear, actualizar y eliminar registros.\n- **Personalizacion** Se pueden usar plantillas bootstrap, pero tambien, al ser tan simple, siempre y cuando se mantengan las etiquetas originales con sus id, puede ser modificado completamente a gusto\n- **PWA** Al disponer de service workers y ser servido mediante https, los datos pueden permanecer en el cliente fuera de linea, pudiendo ser consultados libremente.\n- **Responsive** Las caracteristicas del cliente definen la calidad de la lectura al ajustarse a los parametros necesarios.\n- **Notificaciones push** Para poder notificar al cliente si hay una version mas reciente del archivo entradas.json o indicar que el archivo local ha sido modificado y debe guardarse para mostrar los cambios de forma global.",
-            "fecha_creacion": "14/9/2021",
-            "etiquetas": "nuevo,algo,palabras,cosos"
-        },
-        {
-            "id": 2,
-            "titulo": "Changelog",
-            "contenido": "luego vere que hacer aqui",
-            "fecha_creacion": "14/9/2021",
-            "etiquetas": "nuevo,palabras,cosos"
-        },
-        {
-            "id": 3,
-            "titulo": "Sistema de Blogging tradicional",
-            "contenido": "El objetivo de este proyecto no es reescribir la rueda, sino ofrecer una alternativa a los modelos tradicionales de forma didactica, para que quienes deseen, puedan aprender directamente del codigo.\n\nPara esto, se mantienen aspectos tradicionales de los blogs como:\n\n- **Presentacion de entradas en forma descendente** Muestra las entradas mas recientes primero en la pantalla inicial\n- **Busqueda simple por contenido de las entradas** La busqueda es muy simple, se selecciona un array de palabras ingresadas en el campo de busqueda y se confirma si estas existen en las entradas. Se creara una lista de entradas que contengan los criterios de busqueda\n- **Busqueda por etiquetas** Se mostraran solo las entradas que tengan las etiquetas seleccionadas\n- **Categorias?** Tal vez en una proxima actualizacion\n- **Comentarios?** Dado que solo se cargan paginas estaticas, no es posible almacenar comentarios. En todo caso, tal vez sea posible vincular las url con sistemas como discus y otros.\n- **Gestion SEO** No es precisamente imposible, pero la mayor parte del procesamiento se realiza desde el lado del cliente, por lo que, si bien, los motores de busqueda pueden encontrar por ejemplo, el archivo index.html, no podrian leer los contenidos de las entradas, ya que esto requiere javascript y no solo texto plano. He leido que hay algunos buscadores que ya crean una representacion virtual del tiempo de ejecucion, por lo que pueden localizar informacion que solo se carga durante la ejecucion en el cliente, pero no he investigado mas.",
-            "fecha_creacion": "14/9/2021",
-            "etiquetas": "nuevo,palabras,cosos"
-        },
-        {
-            "id": 4,
-            "titulo": "Limites del sistema",
-            "contenido": "Realmente no se que limites podria tener, pero estimo que esta bastante limitado, debido a que carga un archivo json que crecera bastante con el tiempo.\n\nAl parecer cada navegador tiene sus propias restricciones de memoria, pero basicamente la mayoria tienen espacio ilimitado para el local storage, el problema esta mas relacionado con la memoria ram.\n\nSi bien el almacenamiento no es mayor problema, el archivo json es cargado directamente en la memoria ram, asi que su consumo es directamente proporcional al tamaño neto del archivo.\n\nLos procesos del sistema no consumen demasiada memoria, pero al renderizar tienen que cargar el archivo por completo para procesarlo, es posible que comiencen a sentirse los efectos pasado los 10MB, puesto que el consumo de memoria suele incrementarse de forma exponencial al tamaño del archivo. Es bastante impresionante lo que puede cargar una base de datos normal. Mis respetos.\n\nSolo por pura diversion, intentare hacer pruebas en un dispositivo kaiOS, Despues de todo, este proyecto comenzo pensando en un alcatel 3070A",
-            "fecha_creacion": "14/9/2021",
-            "etiquetas": "nuevo,palabras,cosos"
-        },
-        {
-            "id": 5,
-            "titulo": "Sobre las imagenes",
-            "contenido": "Se pueden utilizar las mismas etiquetas para incrustar imagenes en el documento, siempre y cuando se hayan subido primero las imagenes al directorio destinado **imagenes** o en su defecto, donde se desee almacenar los recursos requeridos",
-            "fecha_creacion": "14/9/2021",
-            "etiquetas": "nuevo,palabras,cosos"
-        },
-        {
-            "id": 6,
-            "titulo": "Sobre archivos adjuntos",
-            "contenido": "Se pueden adjuntar archivos de forma normal mediante hipervínculos.",
-            "fecha_creacion": "14/9/2021",
-            "etiquetas": "nuevo,palabras,cosos"
-        },
-        {
-            "id": 7,
-            "titulo": "Sobre las capacidades de markdown",
-            "contenido": "Si, se pueden crear tablas, ¿a que mola, verdad?\n\n|mola|si|no|\n|----|--|--|\n|yo|x||\n|ustedes|x||",
-            "fecha_creacion": "14/9/2021",
-            "etiquetas": "nuevo,palabras,cosos"
-        },
-        {
-            "id": 8,
-            "titulo": "ya ni se que entrada es esta",
-            "contenido": "dsfg sdfg ",
-            "etiquetas": "sdf gsdfg ",
-            "fecha_creacion": "2021-8-22 14:51:27",
-            "fecha_modificacion": "2021-8-22 15:4:4"
-        },
-        {
-            "id": 11,
-            "titulo": "creo que hasta podria hacer un diario con esto",
-            "contenido": "sdf sdfg dsfg ",
-            "etiquetas": "",
-            "fecha_creacion": "2021-8-22 14:54:42",
-            "fecha_modificacion": "2021-8-22 15:4:46"
-        },
-        {
-            "id": 12,
-            "titulo": "es tan rapido que me encanta",
-            "contenido": "sf gsdfg ",
-            "etiquetas": "",
-            "fecha_creacion": "2021-8-22 14:55:11",
-            "fecha_modificacion": "2021-8-22 15:4:54"
-        },
-        {
-            "id": 13,
-            "titulo": "no se cuanto durara hasta que el peso del archivo desborde la memoria jajaja",
-            "contenido": "sdf sd fg",
-            "etiquetas": "",
-            "fecha_creacion": "2021-8-22 14:56:8",
-            "fecha_modificacion": "2021-8-22 15:5:14"
-        },
-        {
-            "id": 15,
-            "titulo": "ultima edicion",
-            "contenido": "La idea de este proyecto es crear una plataforma muy simple de blogging que no dependa de fuentes externas ni de servidores especializados, sirviendose unicamente de un archivo json que puede ser actualizado unicamente por el propietario del sitio donde se aloje el blog\n",
-            "etiquetas": "a,b,c,d,e",
-            "fecha_creacion": "2021-8-22 14:56:48",
-            "fecha_modificacion": "2021-8-22 15:5:43"
-        },
-        {
-            "id": 16,
-            "titulo": "prueba de superacion del sistema de PWA",
-            "contenido": "Todo Apunta a que usar el sistema PWA es muy mala idea",
-            "etiquetas": "mala idea, esto aun no sirve, etc",
-            "fecha_creacion": "2021-8-23 10:36:28",
-            "fecha_modificacion": "2021-8-23 10:36:28"
-        },
-        {
-            "id": 17,
-            "titulo": "Al parecer los cambios locales se guardan con exito",
-            "contenido": "ahora hacer un boton para actualizar y esta listo",
-            "etiquetas": "",
-            "fecha_creacion": "2021-8-23 10:37:25",
-            "fecha_modificacion": "2021-8-23 10:37:25"
-        },
-        {
-            "id": 18,
-            "titulo": "Al parecer los cambios locales se guardan con exito",
-            "contenido": "ahora hacer un boton para actualizar y esta listo.\nMe sigue pareciendo increible lo rapido que se actualiza",
-            "etiquetas": "",
-            "fecha_creacion": "2021-8-23 10:37:41",
-            "fecha_modificacion": "2021-8-23 10:37:41"
-        }
-    ]
+  [
+    {
+      "sitio": "Sistema Super Simple de Blogging (3SB)",
+      "descripcion": "La idea de este proyecto es crear una plataforma muy simple de blogging que no dependa de fuentes externas ni de servidores especializados, sirviendose unicamente de un archivo json que puede ser actualizado unicamente por el propietario del sitio donde se aloje el blog"
+    }
+  ],
+  [
+    {
+      "id": 1,
+      "titulo": "SSSB",
+      "contenido": "# Sistema Super Simple de Blogging\n\n## Caracteristicas\n\nEste blog permite toda la gama de CRUD para cada elemento de la base de datos (entradas.json), pero los cambios se almacenan de forma local en el localStorage, por lo que si se quieren hacer publicos los cambios, es necesario exportar el nuevo archivo entradas.json y reemplazar al anterior.\n\nLas caracteristicas iniciales de este proyecto son las siguientes\n\n- **CRUD completo** Es decir, crear, actualizar y eliminar registros.\n- **Personalizacion** Se pueden usar plantillas bootstrap, pero tambien, al ser tan simple, siempre y cuando se mantengan las etiquetas originales con sus id, puede ser modificado completamente a gusto\n- **PWA** Al disponer de service workers y ser servido mediante https, los datos pueden permanecer en el cliente fuera de linea, pudiendo ser consultados libremente.\n- **Responsive** Las caracteristicas del cliente definen la calidad de la lectura al ajustarse a los parametros necesarios.\n- **Notificaciones push** Para poder notificar al cliente si hay una version mas reciente del archivo entradas.json o indicar que el archivo local ha sido modificado y debe guardarse para mostrar los cambios de forma global.",
+      "fecha_creacion": "14/9/2021",
+      "etiquetas": "nuevo,algo,palabras,cosos"
+    },
+    {
+      "id": 2,
+      "titulo": "Changelog",
+      "contenido": "luego vere que hacer aqui",
+      "fecha_creacion": "14/9/2021",
+      "etiquetas": "nuevo,palabras,cosos"
+    },
+    {
+      "id": 3,
+      "titulo": "Sistema de Blogging tradicional",
+      "contenido": "El objetivo de este proyecto no es reescribir la rueda, sino ofrecer una alternativa a los modelos tradicionales de forma didactica, para que quienes deseen, puedan aprender directamente del codigo.\n\nPara esto, se mantienen aspectos tradicionales de los blogs como:\n\n- **Presentacion de entradas en forma descendente** Muestra las entradas mas recientes primero en la pantalla inicial\n- **Busqueda simple por contenido de las entradas** La busqueda es muy simple, se selecciona un array de palabras ingresadas en el campo de busqueda y se confirma si estas existen en las entradas. Se creara una lista de entradas que contengan los criterios de busqueda\n- **Busqueda por etiquetas** Se mostraran solo las entradas que tengan las etiquetas seleccionadas\n- **Categorias?** Tal vez en una proxima actualizacion\n- **Comentarios?** Dado que solo se cargan paginas estaticas, no es posible almacenar comentarios. En todo caso, tal vez sea posible vincular las url con sistemas como discus y otros.\n- **Gestion SEO** No es precisamente imposible, pero la mayor parte del procesamiento se realiza desde el lado del cliente, por lo que, si bien, los motores de busqueda pueden encontrar por ejemplo, el archivo index.html, no podrian leer los contenidos de las entradas, ya que esto requiere javascript y no solo texto plano. He leido que hay algunos buscadores que ya crean una representacion virtual del tiempo de ejecucion, por lo que pueden localizar informacion que solo se carga durante la ejecucion en el cliente, pero no he investigado mas.",
+      "fecha_creacion": "14/9/2021",
+      "etiquetas": "nuevo,palabras,cosos"
+    },
+    {
+      "id": 4,
+      "titulo": "Limites del sistema",
+      "contenido": "Realmente no se que limites podria tener, pero estimo que esta bastante limitado, debido a que carga un archivo json que crecera bastante con el tiempo.\n\nAl parecer cada navegador tiene sus propias restricciones de memoria, pero basicamente la mayoria tienen espacio ilimitado para el local storage, el problema esta mas relacionado con la memoria ram.\n\nSi bien el almacenamiento no es mayor problema, el archivo json es cargado directamente en la memoria ram, asi que su consumo es directamente proporcional al tamaño neto del archivo.\n\nLos procesos del sistema no consumen demasiada memoria, pero al renderizar tienen que cargar el archivo por completo para procesarlo, es posible que comiencen a sentirse los efectos pasado los 10MB, puesto que el consumo de memoria suele incrementarse de forma exponencial al tamaño del archivo. Es bastante impresionante lo que puede cargar una base de datos normal. Mis respetos.\n\nSolo por pura diversion, intentare hacer pruebas en un dispositivo kaiOS, Despues de todo, este proyecto comenzo pensando en un alcatel 3070A",
+      "fecha_creacion": "14/9/2021",
+      "etiquetas": "nuevo,palabras,cosos"
+    },
+    {
+      "id": 5,
+      "titulo": "Sobre las imagenes",
+      "contenido": "Se pueden utilizar las mismas etiquetas para incrustar imagenes en el documento, siempre y cuando se hayan subido primero las imagenes al directorio destinado **imagenes** o en su defecto, donde se desee almacenar los recursos requeridos",
+      "fecha_creacion": "14/9/2021",
+      "etiquetas": "nuevo,palabras,cosos"
+    },
+    {
+      "id": 6,
+      "titulo": "Sobre archivos adjuntos",
+      "contenido": "Se pueden adjuntar archivos de forma normal mediante hipervínculos.",
+      "fecha_creacion": "14/9/2021",
+      "etiquetas": "nuevo,palabras,cosos"
+    },
+    {
+      "id": 13,
+      "titulo": "no se cuanto durara hasta que el peso del archivo desborde la memoria jajaja",
+      "contenido": "sdf sd fg",
+      "etiquetas": "",
+      "fecha_creacion": "2021-8-22 14:56:8",
+      "fecha_modificacion": "2021-8-22 15:5:14"
+    },
+    {
+      "id": 15,
+      "titulo": "ultima edicion",
+      "contenido": "La idea de este proyecto es crear una plataforma muy simple de blogging que no dependa de fuentes externas ni de servidores especializados, sirviendose unicamente de un archivo json que puede ser actualizado unicamente por el propietario del sitio donde se aloje el blog\n",
+      "etiquetas": "a,b,c,d,e",
+      "fecha_creacion": "2021-8-22 14:56:48",
+      "fecha_modificacion": "2021-8-22 15:5:43"
+    },
+    {
+      "id": 18,
+      "titulo": "Al parecer los cambios locales se guardan con exito",
+      "contenido": "ahora hacer un boton para actualizar y esta listo.\nMe sigue pareciendo increible lo rapido que se actualiza",
+      "etiquetas": "",
+      "fecha_creacion": "2021-8-23 10:37:41",
+      "fecha_modificacion": "2021-8-23 10:37:41"
+    }
+  ]
 ]
