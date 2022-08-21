@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Home</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Home</h1>
+
+    
+
+
+
+    
+
+
+    <h3> </h3>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    <section>
+        <article><h1>Sistema Super Simple de Blogging (3SB)</h1>
+<p><strong>Autor:</strong> <a href="https://interlan.ec/drk0027">Drk0027</a></p>
+<p><strong>Version:</strong> 1.0</p>
+<p><strong>ChangeLog:</strong> <a href="changelog.md">Changelog</a></p>
+<p><strong>Documentacion:</strong> <a href="/documentacion/">Documentacion</a></p>
+<h2>Tabla de contenidos</h2>
+<ul>
+<li><a href="#sistema-super-simple-de-blogging-3sb">Sistema Super Simple de Blogging (3SB)</a>
+<ul>
+<li><a href="#tabla-de-contenidos">Tabla de contenidos</a></li>
+<li><a href="#motivacion">Motivacion</a></li>
+<li><a href="#caracteristicas">Caracteristicas</a></li>
+<li><a href="#sistema-de-blogging-tradicional">Sistema de Blogging tradicional</a></li>
+<li><a href="#limites-del-sistema">Limites del sistema</a></li>
+<li><a href="#sobre-las-im%C3%A1genes-y-archivos">Sobre las imágenes y archivos</a></li>
+<li><a href="#instalacion">Instalacion</a></li>
+<li><a href="#webgrafia">Webgrafia</a></li>
+</ul>
+</li>
+</ul>
+<h2>Motivacion</h2>
+<p>La motivacion de este proyecto, simplemente es crear una herramienta practica, con la cual pueda entrenar mas mis conocimientos de javascript y PWA, ademas de tener un sistema de blogging muy simple que dependa muy poco del servidor.</p>
+<h2>Caracteristicas</h2>
+<p>Este blog permite toda la gama de CRUD para cada elemento de la base de datos (entradas.json), pero los cambios se almacenan de forma local en el localStorage, por lo que si se quieren hacer públicos los cambios, es necesario exportar el nuevo archivo entradas.json y reemplazar al anterior.</p>
+<p>Las caracteristicas iniciales de este proyecto son las siguientes</p>
+<ul>
+<li><strong>CRUD completo</strong> Es decir, crear, actualizar y eliminar registros.</li>
+<li><strong>Personalizacion</strong> Se pueden usar plantillas bootstrap, pero también, al ser tan simple, siempre y cuando se mantengan las etiquetas originales con sus id, puede ser modificado completamente a gusto</li>
+<li><strong>PWA</strong> Al disponer de service workers y ser servido mediante https, los datos pueden permanecer en el cliente fuera de linea, pudiendo ser consultados libremente.</li>
+<li><strong>Responsive</strong> Las características del cliente definen la calidad de la lectura al ajustarse a los parámetros necesarios.</li>
+<li><strong>Notificaciones push</strong> Para poder notificar al cliente si hay una versión mas reciente del archivo entradas.json o indicar que el archivo local ha sido modificado y debe guardarse para mostrar los cambios de forma global.(tal vez proxima version)</li>
+<li><strong>Edición con guardado automático</strong> Al editar una entrada, los cambios se almacenan automaticamente en el localStorage</li>
+</ul>
+<h2>Sistema de Blogging tradicional</h2>
+<p>El objetivo de este proyecto no es reescribir la rueda, sino ofrecer una alternativa a los modelos tradicionales de forma didáctica, para que quienes deseen, puedan aprender directamente del código.</p>
+<p>Para esto, se mantienen aspectos tradicionales de los blogs como:</p>
+<ul>
+<li><strong>Presentación de entradas en forma descendente</strong> Muestra las entradas mas recientes primero en la pantalla inicial</li>
+<li><strong>Búsqueda simple por contenido de las entradas</strong> La búsqueda es muy simple, se selecciona un array de palabras ingresadas en el campo de búsqueda y se confirma si estas existen en las entradas. Se creara una lista de entradas que contengan los criterios de búsqueda (por implementar)</li>
+<li><strong>Búsqueda por etiquetas</strong> Se mostraran solo las entradas que tengan las etiquetas seleccionadas</li>
+<li><strong>Comentarios?</strong> Dado que solo se cargan paginas estáticas, no es posible almacenar comentarios. En todo caso, tal vez sea posible vincular las url con sistemas como discus y otros.</li>
+<li><strong>Gestión SEO</strong> No es precisamente imposible, pero la mayor parte del procesamiento se realiza desde el lado del cliente, por lo que, si bien, los motores de búsqueda pueden encontrar por ejemplo, el archivo index.html, no podrían leer los contenidos de las entradas, ya que esto requiere JavaScript y no solo texto plano. He leído que hay algunos buscadores que ya crean una representación virtual del tiempo de ejecución, por lo que pueden localizar información que solo se carga durante la ejecución en el cliente, pero no he investigado mas.</li>
+</ul>
+<h2>Limites del sistema</h2>
+<p>Realmente no se que limites podría tener, pero estimo que esta bastante limitado, debido a que carga un archivo json que crecerá bastante con el tiempo.</p>
+<p>Al parecer cada navegador tiene sus propias restricciones de memoria, pero básicamente la mayoría tienen espacio ilimitado para el local storage, el problema esta mas relacionado con la memoria RAM.</p>
+<p>Si bien el almacenamiento no es mayor problema, el archivo json es cargado directamente en la memoria RAM, así que su consumo es directamente proporcional al tamaño neto del archivo.</p>
+<p>Los procesos del sistema no consumen demasiada memoria, pero al renderizar tienen que cargar el archivo por completo para procesarlo, es posible que comiencen a sentirse los efectos pasado los 10MB, puesto que el consumo de memoria suele incrementarse de forma exponencial al tamaño del archivo. Es bastante impresionante lo que puede cargar una base de datos normal. Mis respetos.</p>
+<p>Solo por pura diversión, intentare hacer pruebas en un dispositivo kaiOS, Después de todo, este proyecto comenzó pensando en un Alcatel 3078A</p>
+<h2>Sobre las imágenes y archivos</h2>
+<p>Se pueden utilizar las mismas etiquetas para incrustar imágenes en el documento, siempre y cuando se hayan subido primero las imágenes al directorio destinado <strong>imágenes</strong> o en su defecto, donde se desee almacenar los recursos requeridos</p>
+<h2>Instalacion</h2>
+<p>Basta con copiar los archivos en la carpeta publica del servidor. Tal vez cuando lo suba a github tambien se pueda usar el comando git clone para descargar el codigo y ejecutarlo</p>
+<h2>Webgrafia</h2>
+<p>https://www.contentful.com/blog/2021/02/05/how-to-build-a-lightweight-blog/</p>
+<p>https://webcache.googleusercontent.com/search?q=cache:eIh402_7DH8J:https://stackoverflow.com/questions/9156367/is-it-possible-to-build-a-blog-with-html-only+&amp;cd=4&amp;hl=en&amp;ct=clnk&amp;gl=ec</p>
+<p>https://www.quora.com/How-can-I-make-a-web-blog-using-HTML-CSS-and-JavaScript</p>
+<p>https://dev.to/n3rd/deploy-a-javascript-only-blog-with-cms-js-4g7j</p>
+<p>https://cms.js</p></article>
+    </section>
+
+
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#actualizar">actualizar</a></li><li><a href="global.html#carga">carga</a></li><li><a href="global.html#datetime">datetime</a></li><li><a href="global.html#recarga">recarga</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Thu Sep 23 2021 15:01:05 GMT-0500 (GMT-05:00)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

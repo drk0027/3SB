@@ -1,0 +1,38 @@
+{
+    "short_name": "Sistema Super Simple de Blogging",
+    "name": "3SB",
+    "icons": [
+      {
+        "src": "/images/android-chrome-192x192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/images/android-chrome-512x512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "/?source=pwa",
+    "background_color": "#3367D6",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#3367D6",
+    "shortcuts": [
+      {
+        "name": "Sistema Super Simple de Blogging",
+        "short_name": "3SB",
+        "description": "Sistema de blogging offline con pwa",
+        "url": "/today?source=pwa",
+        "icons": [{ "src": "/images/android-chrome-192x192.png", "sizes": "192x192" }]
+      }      
+    ],
+    "description": "Reescritura didactica del juego de la vida con javascript vainilla y canvas en html5",
+    "screenshots": [
+      {
+        "src": "/images/screenshot1.png",
+        "type": "image/png",
+        "sizes": "380x320"
+      }
+    ]
+  }
